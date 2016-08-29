@@ -20,17 +20,23 @@ import javax.swing.JOptionPane;
 
 public class Controlador
 {
-    private JOptionPane interfaz;	
-    private ImageIcon icono;
+    private JOptionPane interfaz;   
+    private ImageIcon logo;
 
     public Controlador()
     {
         interfaz = new JOptionPane();    
-        icono = new ImageIcon("java.png");
+        logo = new ImageIcon("logo-100x100.png");
     }
 
     public void iniciar()
     {
+        interfaz.showMessageDialog(null,
+            "Bienvenido al sistema de General Services, Inc.",
+                "Hola!",
+                    JOptionPane.INFORMATION_MESSAGE,
+                        logo);
+        
         String direccion = interfaz.showInputDialog(null,"Escriba su dirección");
 
         String distritoPlaceholder = interfaz.showInputDialog(null, "Digite el número de distrito en que vive");
@@ -43,7 +49,7 @@ public class Controlador
 
         String casaPropia = this.preguntarCasa();
 
-        interfaz.showMessageDialog(null, "Dirección: " + direccion + "\n" + "Distrito: " + distrito + "\n" + "Cantón: " + canton + "\n" + "Provincia: " + provincia + "\n" + "Casa propia: " + casaPropia, "GRUPO 1A", interfaz.INFORMATION_MESSAGE, icono);
+        interfaz.showMessageDialog(null, "Dirección: " + direccion + "\n" + "Distrito: " + distrito + "\n" + "Cantón: " + canton + "\n" + "Provincia: " + provincia + "\n" + "Casa propia: " + casaPropia, "GRUPO 1A", interfaz.INFORMATION_MESSAGE, logo);
     }
 
     public String obtenerProvincia()
