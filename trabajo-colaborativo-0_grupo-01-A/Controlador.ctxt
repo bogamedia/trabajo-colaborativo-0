@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Controlador()
+comment1.params=
+comment1.target=void\ iniciar()
+comment2.params=
+comment2.target=java.lang.String\ obtenerProvincia()
+comment3.params=
+comment3.target=java.lang.String\ preguntarCasa()
+numComments=4
