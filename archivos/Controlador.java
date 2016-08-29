@@ -1,13 +1,23 @@
-import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
 /**
- * Clase controlador grupo 1A
+ * Clase controlador 
  * 
- * @autores
- * Javier Padilla &...() 
+ * @author:
+ * Grupo 01-A
+ * 
+ * Javier Padilla
  * Hanzel Calderon
  * Tatiana Briones
+ * Carlos Bogarin
+ * 
+ * @version 004: Domingo 28 de agosto de 2016
  */
+
+/**
+   *
+   */
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+
 public class Controlador
 {
     private JOptionPane interfaz;	
