@@ -1,10 +1,17 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Controlador()
+comment0.text=\n\ \ \ \ Constructor\ para\ objetos\ de\ tipo\n\ \ \ \ \ \ \ \ Controlador.\n
 comment1.params=
 comment1.target=void\ iniciar()
+comment1.text=\n\n
 comment2.params=
 comment2.target=java.lang.String\ obtenerProvincia()
+comment2.text=\n\n
 comment3.params=
 comment3.target=java.lang.String\ preguntarCasa()
-numComments=4
+comment3.text=\n\n
+comment4.params=
+comment4.target=void\ mensajeBienvenida()
+comment4.text=\n\n
+numComments=5

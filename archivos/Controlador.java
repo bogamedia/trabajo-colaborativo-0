@@ -13,29 +13,49 @@
  */
 
 /**
-   *
+   *    Importación de paquetes estándar de la clase javax
+   *    para el mamejo de ventanas de diálogo.
    */
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 public class Controlador
 {
+    //  Declaración de objetos del paquete javax.
+    
+    //  El objeto interfaz se encargará de las interacciones
+    //      con el usuario.
     private JOptionPane interfaz;   
+    
+    //  El objeto "logo" almacena el logotipo de la empresa
+    //      "General Services, Inc."
     private ImageIcon logo;
 
+    /**
+       *    Constructor para objetos de tipo
+       *        Controlador.
+        */
+    
     public Controlador()
     {
-        interfaz = new JOptionPane();    
+        //  Inicialización de objetos.
+        
+        //  Inicialización del objeto interfaz.
+        interfaz = new JOptionPane();  
+        
+        //  El objeto logo busca el archivo en la carpeta del proyecto.
+        //  El archivo "logo-100x100.png" es una versión de 100x100 pixeles
+        //      del logo de la empresa "General Services, Inc." 
         logo = new ImageIcon("logo-100x100.png");
     }
-
+    
+    /**
+       *
+        */    
+       
     public void iniciar()
     {
-        interfaz.showMessageDialog(null,
-            "Bienvenido al sistema de General Services, Inc.",
-                "Hola!",
-                    JOptionPane.INFORMATION_MESSAGE,
-                        logo);
+        this.mensajeBienvenida();
         
         String direccion = interfaz.showInputDialog(null,"Escriba su dirección");
 
@@ -51,6 +71,10 @@ public class Controlador
 
         interfaz.showMessageDialog(null, "Dirección: " + direccion + "\n" + "Distrito: " + distrito + "\n" + "Cantón: " + canton + "\n" + "Provincia: " + provincia + "\n" + "Casa propia: " + casaPropia, "GRUPO 1A", interfaz.INFORMATION_MESSAGE, logo);
     }
+    
+    /**
+       *
+        */
 
     public String obtenerProvincia()
     {
@@ -60,7 +84,11 @@ public class Controlador
         provinciaSeleccionada = provinciasCostaRica[choice];
         return provinciaSeleccionada;
     }
-
+    
+    /**
+       *
+        */
+       
     public String preguntarCasa()
     {
         String eleccionUsuario;
@@ -76,4 +104,15 @@ public class Controlador
         return eleccionUsuario;
     }
 
+    /**
+       *
+        */
+    public void mensajeBienvenida()
+    {
+        interfaz.showMessageDialog(null,
+            "Bienvenido al sistema de General Services, Inc.",  //  Mensaje principal.
+                "Hola!",    //  Titulo de la ventana.
+                    JOptionPane.INFORMATION_MESSAGE,    //  Tipo de mensaje.
+                        logo);  //  Objeto que contiene el logo de la empresa.
+    }
 }
